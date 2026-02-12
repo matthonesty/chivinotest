@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d3a45" />
+      <stop offset="100%" stop-color="#182028" />
+    </linearGradient>
+    <pattern id="grain" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="transparent" />
+      <circle cx="2" cy="2" r="0.7" fill="#ffffff1f" />
+      <circle cx="6" cy="5" r="0.6" fill="#ffffff14" />
+      <circle cx="4" cy="7" r="0.5" fill="#ffffff14" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect width="1200" height="800" fill="url(#grain)" opacity="0.45" />
+  <path d="M40 160C220 120 310 340 520 300C690 265 790 110 1160 190" stroke="#f2cf9f66" stroke-width="18" fill="none" stroke-linecap="round" />
+  <path d="M80 520C250 460 360 700 590 620C730 572 900 420 1160 500" stroke="#e8a46466" stroke-width="14" fill="none" stroke-linecap="round" />
+  <text x="600" y="420" text-anchor="middle" fill="#f7efe4cc" font-family="Georgia, serif" font-size="54" letter-spacing="4">
+    CHIVINO
+  </text>
+  <text x="600" y="470" text-anchor="middle" fill="#f7efe499" font-family="Georgia, serif" font-size="24" letter-spacing="5">
+    STONE TEXTURE PREVIEW
+  </text>
+</svg>
