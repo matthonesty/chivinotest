@@ -577,7 +577,18 @@ function AssetCard({ asset, isActive, onSelect, delayIndex }) {
   );
 }
 
-function RoomVisualizer({ assetName }) {
+function RoomVisualizer({ assetName, textureId }) {
+  const nativeViewerQuery = new URLSearchParams({
+    company: COMPANY,
+    scene: "oceanview01",
+  });
+
+  if (textureId) {
+    nativeViewerQuery.set("counteroptexture", textureId);
+  }
+
+  const nativeViewerHref = `/native-viewer/?${nativeViewerQuery.toString()}`;
+
   return (
     <div className="tool-stage coming-soon-stage">
       <div className="coming-soon-body">
@@ -585,6 +596,14 @@ function RoomVisualizer({ assetName }) {
         <p className="coming-soon-subtitle">
           Native visualizer module for {assetName}
         </p>
+        <a
+          className="native-viewer-link"
+          href={nativeViewerHref}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Fullscreen Native Viewer
+        </a>
       </div>
       <p className="tool-caption">Visualizer module is in progress.</p>
     </div>
@@ -1356,7 +1375,10 @@ export default function App() {
                 </div>
 
                 {activeTool === "visualizer" && (
-                  <RoomVisualizer assetName={displayName} />
+                  <RoomVisualizer
+                    assetName={displayName}
+                    textureId={selectedProduct?.textureId || selectedAsset?.textureId || ""}
+                  />
                 )}
                 {activeTool === "three" && (
                   <SlabThreeViewer

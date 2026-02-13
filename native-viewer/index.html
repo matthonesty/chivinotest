@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chivino Native Viewer</title>
+  </head>
+  <body>
+    <div id="native-viewer-root">
+      <canvas id="native-scene-canvas" aria-label="Native 3D scene viewer"></canvas>
+
+      <aside class="viewer-panel viewer-panel-left">
+        <p class="panel-eyebrow">Option 2 Milestone</p>
+        <h1>Native Scene Loader</h1>
+        <p class="panel-copy">
+          Fullscreen Three.js viewer loading raw scene assets from SlabCloud buffers.
+        </p>
+        <p id="viewer-status" class="status-line">Initializing...</p>
+        <p id="scene-meta" class="scene-meta"></p>
+        <div class="panel-actions">
+          <button id="camera-mode-button" type="button">Camera: Orbit</button>
+          <button id="reset-camera-button" type="button">Reset Camera</button>
+          <a class="panel-link" href="/">Back to Inventory</a>
+        </div>
+        <p id="fps-hint" class="hint" hidden>
+          FPS mode: click viewer to lock pointer, use WASD to move, Q/E for vertical movement.
+        </p>
+      </aside>
+
+      <aside class="viewer-panel viewer-panel-right">
+        <p class="panel-eyebrow">Countertop Swap</p>
+        <h2>Apply Slab Texture</h2>
+        <label for="texture-select">Inventory Texture</label>
+        <select id="texture-select" aria-label="Inventory texture selection"></select>
+        <div class="texture-preview">
+          <img id="texture-select-preview" alt="Selected slab texture preview" />
+        </div>
+        <div class="panel-actions stack">
+          <button id="apply-selection-button" type="button">Apply Selected Texture</button>
+        </div>
+        <p id="countertop-targets" class="countertop-targets"></p>
+      </aside>
+    </div>
+
+    <script type="module" src="/src/native-viewer/main.js"></script>
+  </body>
+</html>

@@ -578,6 +578,34 @@ body::before {
   font-size: 0.92rem;
 }
 
+.native-viewer-link {
+  margin-top: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(242, 207, 159, 0.46);
+  border-radius: 999px;
+  padding: 0.42rem 0.82rem;
+  color: var(--accent-2);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: "Avenir Next Condensed", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+  transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.native-viewer-link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(242, 207, 159, 0.84);
+  color: var(--text-main);
+}
+
+.native-viewer-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .room-visualizer {
   position: relative;
   min-height: 210px;
