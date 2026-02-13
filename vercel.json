@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/slabcloud-proxy/:path*",
+      "destination": "https://slabcloud.com/:path*"
+    }
+  ]
+}
