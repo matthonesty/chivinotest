@@ -53,7 +53,8 @@ body::before {
   position: relative;
   min-height: 100vh;
   padding: clamp(1rem, 2vw + 0.4rem, 2.5rem);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .ambient {
@@ -347,6 +348,7 @@ body::before {
 }
 
 .details-panel {
+  align-self: start;
   position: sticky;
   top: 1rem;
   border: 1px solid var(--line-soft);
